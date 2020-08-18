@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Ground
+  - Enemy
+  - AttackRange
+  - Monster1
+  - Monster2
+  - Monster3
+  - Monster4
+  - Coin
+  - Boss
+  - Start
+  - Shop
+  - BigFire
+  - EndPoint
+  - Monster
+  - endpoint
+  - Obstacle
+  - CanBePickedUp
+  - Bullet
+  - PlayerWeapon
+  - MonsterWeapon
+  - Armor
+  - Glove
+  - Axe
+  - Apple
+  - Potion
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Platform
+  - MonsterBlock
+  - Player
+  - Monster
+  - Enemy
+  - PlayerDamaged
+  - AttackRange
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
