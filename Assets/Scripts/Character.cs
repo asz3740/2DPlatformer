@@ -43,6 +43,7 @@ public class Character : MonoBehaviour
 
     public virtual void TakeDamage(int damaged)
     {
+        print(HP); 
         if (HP <= 0)
         {
             Die();

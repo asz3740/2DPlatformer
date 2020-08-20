@@ -288,7 +288,7 @@ public class Player : Character
         }
         if(collision.gameObject.tag == "Bullet")
         {
-            HP -= 5;
+            TakeDamage(5);
         }
 
 

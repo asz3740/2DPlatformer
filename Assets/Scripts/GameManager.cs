@@ -13,32 +13,43 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject[] item; 
 
-    public float spawnCool = 5f;
-    public float spawnCoolTime;
-
-    public int deadMonsterCount;
+    [SerializeField]
+    private float spawnCool = 5f;
+    private float spawnCoolTime;
 
     public int totalCoin = 0;
-    public int stageIndex = 0;
-    public Player player;
-    //public Boss boss;
-  
 
-    public Image PlayerHPbarI;
-    public Text playerHPT;
+    [SerializeField]
+    private int stageIndex = 0;
 
-    //public Image BossHPbar;
-    //public Text BossHPtext;
+    private Player player;
+    private Boss boss;
+
+    [SerializeField]
+    private Image PlayerHPbarI;
+    [SerializeField]
+    private Text playerHPT;
+
+    [SerializeField]
+    private Image bossHPbarI;
+    [SerializeField]
+    private Text bossHPT;
 
     [SerializeField]
     private Text stageNameT;
 
     [SerializeField]
     private Text coinSumT;
+
+    [SerializeField]
+    private Text gameTimer;
+
+    [SerializeField]
+    public GameObject cinemachine;
     //public Text Attack;
 
     //public GameObject gameoverText;
-    //public GameObject BossHP;
+    public GameObject BossHP;
     //bool isGameOver = false;
 
     //public GameObject menuSet;
@@ -79,8 +90,12 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        player = GameObject.Find("Player").GetComponent<Player>();
         stageNameT.text = "침략의 시작";
+
     }
+
+    public GameObject wall;
 
     public void NextStage()
     {
@@ -92,17 +107,20 @@ public class GameManager : MonoBehaviour
             stages[stageIndex].SetActive(true);
 
             if (stageIndex == 3)
+            {
+                wall.SetActive(false);
                 player.isSwimming = true;
+            }
             else
                 player.isSwimming = false;
 
             if (stageIndex == 4)
             {
-                //BossHP.SetActive(true);
+                cinemachine.SetActive(false);
+                boss = GameObject.Find("Boss").GetComponent<Boss>();
+                BossHP.SetActive(true);
             }
             PlayerReposition();
-            deadMonsterCount = 0;
-            //player.MonsterCount = 0;
         }
         else
         {
@@ -110,12 +128,6 @@ public class GameManager : MonoBehaviour
 
             Debug.Log("게임 클리어!");
         }
-
-
-
-
-        //totalCoin += stageCoin;
-        //stageCoin = 0;
     }
 
     //void Update()
@@ -155,6 +167,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         stageNameFalseCoolTime += Time.deltaTime;
+        gameTimer.text = "" + Mathf.Round(stageNameFalseCoolTime);
 
         if (stageNameFalseCoolTime > stageNameFalseCool)
         {
@@ -164,6 +177,8 @@ public class GameManager : MonoBehaviour
         spawnCoolTime += Time.deltaTime;
 
         HPbarUI();
+        if (stageIndex == 4)
+            BossHPbarUI();
         CoinUI();
 
     }
@@ -175,22 +190,32 @@ public class GameManager : MonoBehaviour
 
     private void HPbarUI()
     {
-        float HP = player.HP;
-        float MAXHP = player.startHP;
-        if (HP < 0)
-        {
-            MAXHP = 0;
-        }
-        PlayerHPbarI.fillAmount = HP / MAXHP;
-        playerHPT.text = string.Format("HP {0}/{1}", HP, MAXHP);
 
-        //float BossHP = boss.HP;
-        //BossHPbar.fillAmount = BossHP / 500f;
-        //BossHPtext.text = string.Format("HP {0}/500", BossHP);
+        float playerHP = player.HP;
+        print("playerHP" + playerHP);
+        float playerMaxHP = player.startHP;
+        if (playerHP < 0)
+        {
+            playerMaxHP = 0;
+        }
+        PlayerHPbarI.fillAmount = playerHP / playerMaxHP;
+        playerHPT.text = string.Format("HP {0}/{1}", playerHP, playerMaxHP);
+
+      
 
         //float ATT = player.ATT;
         //Attack.text = ATT.ToString();
 
+    }
+
+    private void BossHPbarUI()
+    {
+        float bossHP = boss.HP;
+        print(" boss.HP" + boss.HP);
+        print("bossHP" + bossHP);
+        //float bossMaxHP = 700f;
+        bossHPbarI.fillAmount = bossHP / 1000;
+        bossHPT.text = string.Format("HP {0}/1000", bossHP, 1000f);
     }
 
     private void CoinUI()
@@ -221,13 +246,17 @@ public class GameManager : MonoBehaviour
         Debug.Log("끝");
     }
 
+    public void SuccessGame()
+    {
+        print("승리");
+    }
+
     //public void GameExit()
     //{
     //    Application.Quit();
     //}
 
 
-   
 
 
 
@@ -236,7 +265,8 @@ public class GameManager : MonoBehaviour
 
 
 
-    
+
+
 
 
 }

@@ -45,8 +45,8 @@ TagManager:
   - Enemy
   - PlayerDamaged
   - AttackRange
-  - 
-  - 
+  - Boss
+  - BossSkill
   - 
   - 
   - 

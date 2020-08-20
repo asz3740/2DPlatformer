@@ -82,7 +82,6 @@ public class Enemy : Character
     public override void Die()
     {
         base.Die();
-        GameManager.Instance.deadMonsterCount++;
         GameManager.Instance.CoinSum(coin);
         GameManager.Instance.RandomItem(transform);
         Invoke("Respawn", 6f);
