@@ -3,11 +3,13 @@ using UnityEngine.SceneManagement;
 
 public class ChangeScene : MonoBehaviour
 {
-    void Update()
+    public void moveLobby()
     {
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            SceneManager.LoadScene("InGame");
-        }
+        SceneManager.LoadScene("Lobby");
+    }
+
+    public void moveIngame()
+    {
+        SceneLoad.LoadScene("Ingame");
     }
 }

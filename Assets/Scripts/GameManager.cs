@@ -46,13 +46,19 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     public GameObject cinemachine;
-    //public Text Attack;
 
-    //public GameObject gameoverText;
     public GameObject BossHP;
-    //bool isGameOver = false;
 
-    //public GameObject menuSet;
+    [SerializeField]
+    private GameObject won;
+
+    [SerializeField]
+    private Text wonText;
+
+    [SerializeField]
+    private GameObject gameOver;
+
+    private float gamePlayTime;
 
 
     private static GameManager _instance;
@@ -82,17 +88,12 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        DontDestroyOnLoad(gameObject);
     }
 
-    private float stageNameFalseCoolTime;
-    private float stageNameFalseCool = 5f;
 
     void Start()
     {
         player = GameObject.Find("Player").GetComponent<Player>();
-        stageNameT.text = "침략의 시작";
-
     }
 
     public GameObject wall;
@@ -106,13 +107,6 @@ public class GameManager : MonoBehaviour
             stageIndex++;
             stages[stageIndex].SetActive(true);
 
-            if (stageIndex == 3)
-            {
-                wall.SetActive(false);
-                player.isSwimming = true;
-            }
-            else
-                player.isSwimming = false;
 
             if (stageIndex == 4)
             {
@@ -122,57 +116,14 @@ public class GameManager : MonoBehaviour
             }
             PlayerReposition();
         }
-        else
-        {
-            Time.timeScale = 0;
-
-            Debug.Log("게임 클리어!");
-        }
     }
-
-    //void Update()
-    //{
-    //    //if (Input.GetButtonDown("Cancel"))
-        //{
-        //    if (menuSet.activeSelf)
-        //    {
-        //        menuSet.SetActive(false);
-        //        Time.timeScale = 1;
-        //    }
-
-        //    else
-        //    {
-        //        menuSet.SetActive(true);
-        //        Time.timeScale = 0;
-        //    }
-        //}
-
-
-
-        //curSpawnDelay += Time.deltaTime;
-
-
-        //Coin.text = (totalCoin + stageCoin).ToString();
-        //HPbar();
-        //if (isGameOver)
-        //{
-        //    if (Input.GetKeyDown(KeyCode.R))
-        //    {
-        //        SceneManager.LoadScene("Main_Lobby_Map");
-        //    }
-        //}
-
-    //}
 
     void Update()
     {
-        stageNameFalseCoolTime += Time.deltaTime;
-        gameTimer.text = "" + Mathf.Round(stageNameFalseCoolTime);
+        gamePlayTime += Time.deltaTime;
+        gameTimer.text = "" + Mathf.Round(gamePlayTime);
 
-        if (stageNameFalseCoolTime > stageNameFalseCool)
-        {
-            stageNameT.gameObject.SetActive(false);
-        }
+
 
         spawnCoolTime += Time.deltaTime;
 
@@ -185,7 +136,6 @@ public class GameManager : MonoBehaviour
     private void PlayerReposition()
     {
         player.transform.position = new Vector3(-15, -9, 0);
-        //player.VelocityZero();
     }
 
     private void HPbarUI()
@@ -201,11 +151,7 @@ public class GameManager : MonoBehaviour
         PlayerHPbarI.fillAmount = playerHP / playerMaxHP;
         playerHPT.text = string.Format("HP {0}/{1}", playerHP, playerMaxHP);
 
-      
-
-        //float ATT = player.ATT;
-        //Attack.text = ATT.ToString();
-
+     
     }
 
     private void BossHPbarUI()
@@ -213,7 +159,6 @@ public class GameManager : MonoBehaviour
         float bossHP = boss.HP;
         print(" boss.HP" + boss.HP);
         print("bossHP" + bossHP);
-        //float bossMaxHP = 700f;
         bossHPbarI.fillAmount = bossHP / 1000;
         bossHPT.text = string.Format("HP {0}/1000", bossHP, 1000f);
     }
@@ -239,35 +184,16 @@ public class GameManager : MonoBehaviour
 
     public void EndGame()
     {
-        //gameoverText.SetActive(true);
-        //isGameOver = true;
-        //totalCoin += stageCoin;
-        //Gamesave();
-        Debug.Log("끝");
+        gameOver.SetActive(true);
     }
 
     public void SuccessGame()
     {
-        print("승리");
+        player.gameObject.SetActive(false);
+        won.SetActive(true);
+        wonText.text = Mathf.Round(gamePlayTime) + "초";
+
     }
-
-    //public void GameExit()
-    //{
-    //    Application.Quit();
-    //}
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }
 
