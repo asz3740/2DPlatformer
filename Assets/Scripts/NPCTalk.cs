@@ -25,6 +25,7 @@ public class NPCTalk : MonoBehaviour
 
             StartCoroutine(WaitForIt());
             player.speed = 0;
+            player.dashSpeed = 0;
         }
 
 

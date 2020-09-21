@@ -2,7 +2,9 @@
 using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
-    public GameObject ui;
+    [SerializeField]
+    private GameObject ui;
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))

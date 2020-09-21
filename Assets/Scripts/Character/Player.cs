@@ -9,7 +9,7 @@ public class Player : Character
     [Header("이동")]
 
     [SerializeField]
-    private float dashSpeed;
+    public float dashSpeed;
 
     private float walkAnimSpeed = 1.5f;
     private float runAnimSpeed = 2f;

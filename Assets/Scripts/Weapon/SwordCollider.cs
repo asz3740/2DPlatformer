@@ -11,6 +11,7 @@ public class SwordCollider : Weapon
     {
         if (other.tag == targetTag)
         {
+            print("1111");
             GetComponent<Collider2D>().enabled = false;
         }
     }

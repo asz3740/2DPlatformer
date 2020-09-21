@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class Shop : MonoBehaviour
 {
     public Player player;
-    //public GameObject Item;
     public Text ex;
     public Text won;
     public Text itemEx;
