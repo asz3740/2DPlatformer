@@ -17,5 +17,5 @@
 6. 적뿐만 아니라 지뢰도 조심하세요
 
 ## 게임화면
-<a href="#"><img src="/Images/메인화면.png" width="50%" alt="Main"></a> 
-<a href="#"><img src="/Images/튜토리얼.png" width="50%" alt="Tutorial"></a> 
+<a href="#"><img src="/Images/메인화면.png" width="50%" alt="Main"></a> <a href="#"><img src="/Images/튜토리얼.png" width="50%" alt="Tutorial"></a> 
+
