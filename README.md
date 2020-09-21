@@ -17,4 +17,4 @@
 6. 적뿐만 아니라 지뢰도 조심하세요
 
 ## 게임화면
-![Alt text](/Images/메인화면.jpg)
+<img src="/Images/메인화면.jpg" width="450px" height="300px" title=30" alt="main"></img><br/>
