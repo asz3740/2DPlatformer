@@ -18,3 +18,4 @@
 
 ## 게임화면
 ![Alt text](/Images/메인화면.png)
+![Alt text](/Images/튜토리얼.png)
