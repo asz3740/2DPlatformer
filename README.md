@@ -17,3 +17,5 @@
 6. 적뿐만 아니라 지뢰도 조심하세요
 
 ## 게임화면
+![Github logo] (images/메인화면.jpg)
+![Github logo] (images/튜토리얼.jpg)
