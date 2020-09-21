@@ -28,8 +28,8 @@
 2019.11 | 2019.11 | 2019.12 | 2020.1
 
 ## 비슷한 타사 게임
-<a href="#"><img src="/Images/던그리드.png" width="50%" alt="Dungreed"></a>    
+<img src="/Images/던그리드.png" width="50%" alt="Dungreed"> 
 던그리드  
-<a href="#"><img src="/Images/스컬- 더 히어로 슬레이어.jpg" width="50%" alt="Skul"></a>    
+<img src="/Images/스컬- 더 히어로 슬레이어.jpg" width="50%" alt="Skul">
 스컬- 더 히어로 슬레이어
 
