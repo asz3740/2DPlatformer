@@ -69,4 +69,15 @@
 </table>
 
 ## UML
- <td><img src="/Images/UML.png" width="100%"></td>
+<img src="/Images/UML.png" width="100%">
+ 
+## 배운 점
+**1. 적 AI 구현**  
+StateMachineBehaviour을 활용해 AI 구현  
+**2. 인벤토리 구현**  
+배열로 인벤토리 구현  
+**3. Scriptable Object**  
+빠른 아이템 에셋 생성 구현
+
+
+    
