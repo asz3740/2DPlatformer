@@ -1,4 +1,5 @@
 # NinjaWorld (2DPlatformer)
+
 ## 게임 소개
 2D 로그라이트 요소가 가미된 2D 플랫포머 횡스크롤 액션 게임
 ## 프롤로그
@@ -57,9 +58,14 @@
 ----| --------------- | --- | ----- 
 2019.11 | 2019.11 | 2019.12 | 2020.1
 
-## 비슷한 타사 게임
-<img src="/Images/던그리드.png" width="50%" alt="Dungreed"> 
-던그리드  
-<img src="/Images/스컬- 더 히어로 슬레이어.jpg" width="50%" alt="Skul">
-스컬- 더 히어로 슬레이어
-
+## 참고한 게임
+<table>
+   <tr>
+      <td><img src="/Images/던그리드.png" width="100%"></td>
+      <td><img src="/Images/스컬- 더 히어로 슬레이어.jpg" width="100%"></td>
+   </tr>
+     <tr>
+      <td><div align="center" >던그리드</div></td>
+      <td><div align="center" >스컬- 더 히어로 슬레이어</div></td>
+   </tr>
+</table>
