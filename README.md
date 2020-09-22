@@ -27,12 +27,20 @@
       <td><div align="center" >튜토리얼</div></td>
    </tr>
    <tr>
-      <td><img src="/Images/메인화면.png" width="100%" alt="Main"></td>
-      <td><img src="/Images/튜토리얼.png" width="100%" alt="Tutorial"></td>
+      <td><img src="/Images/Stage1.png" width="100%" alt="Main"></td>
+      <td><img src="/Images/Stage2.png" width="100%" alt="Tutorial"></td>
    </tr>
    <tr>
-      <td><div align="center" >메인화면</div></td>
-      <td><div align="center" >메인화면</div></td>
+      <td><div align="center" >Stage1</div></td>
+      <td><div align="center" >Stage2</div></td>
+   </tr>
+    <tr>
+      <td><img src="/Images/Stage3.png" width="100%"></td>
+      <td><img src="/Images/Shop.png" width="100%"></td>
+   </tr>
+     <tr>
+      <td><div align="center" >Stage3</div></td>
+      <td><div align="center" >Shop</div></td>
    </tr>
 </table>
 
