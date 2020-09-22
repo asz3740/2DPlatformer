@@ -61,10 +61,10 @@
 ## 참고한 게임
 <table>
    <tr>
-      <td><img src="/Images/던그리드.png" width="50%"></td>
+      <td><img src="/Images/던그리드.png" width="100%"></td>
    </tr>
     <tr>
-           <td><div align="center" >던그리드</div></td>
+           <td><div align="center">던그리드</div></td>
    </tr>
 </table>
 
