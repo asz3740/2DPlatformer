@@ -61,11 +61,12 @@
 ## 참고한 게임
 <table>
    <tr>
-      <td><img src="/Images/던그리드.png" width="100%"></td>
-      <td><img src="/Images/스컬- 더 히어로 슬레이어.jpg" width="100%"></td>
+      <td><img src="/Images/던그리드.png" width="50%"></td>
    </tr>
-     <tr>
-      <td><div align="center" >던그리드</div></td>
-      <td><div align="center" >스컬- 더 히어로 슬레이어</div></td>
+    <tr>
+           <td><div align="center" >던그리드</div></td>
    </tr>
 </table>
+
+## UML
+ <td><img src="/Images/UML.png" width="100%"></td>
