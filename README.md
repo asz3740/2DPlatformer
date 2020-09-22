@@ -17,10 +17,24 @@
 6. 적뿐만 아니라 지뢰도 조심하세요
 
 ## 게임화면
-<a href="#"><img src="/Images/메인화면.png" width="50%" alt="Main"></a>       
-메인화면   
-<a href="#"><img src="/Images/튜토리얼.png" width="50%" alt="Tutorial"></a>    
-튜토리얼   
+<table border="1">
+   <tr>
+      <td><img src="/Images/메인화면.png" width="100%" alt="Main"></td>
+      <td><img src="/Images/튜토리얼.png" width="100%" alt="Tutorial"></td>
+   </tr>
+   <tr>
+      <td><div align="center" >메인화면</div></td>
+      <td><div align="center" >튜토리얼</div></td>
+   </tr>
+   <tr>
+      <td><img src="/Images/메인화면.png" width="100%" alt="Main"></td>
+      <td><img src="/Images/튜토리얼.png" width="100%" alt="Tutorial"></td>
+   </tr>
+   <tr>
+      <td><div align="center" >메인화면</div></td>
+      <td><div align="center" >메인화면</div></td>
+   </tr>
+</table>
 
 ## 개발일정
 기획 | 클래스 및 기능 설계 | 구현 | 테스트
@@ -28,8 +42,8 @@
 2019.11 | 2019.11 | 2019.12 | 2020.1
 
 ## 비슷한 타사 게임
-<a href="#"><img src="/Images/던그리드.png" width="50%" alt="Dungreed"></a>    
+<img src="/Images/던그리드.png" width="50%" alt="Dungreed"> 
 던그리드  
-<a href="#"><img src="/Images/스컬- 더 히어로 슬레이어.JPEG" width="50%" alt="Skul"></a>    
+<img src="/Images/스컬- 더 히어로 슬레이어.jpg" width="50%" alt="Skul">
 스컬- 더 히어로 슬레이어
 
