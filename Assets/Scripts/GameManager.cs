@@ -60,6 +60,8 @@ public class GameManager : MonoBehaviour
 
     private float gamePlayTime;
 
+    [SerializeField]
+    private GameObject shopExplanation;
 
     private static GameManager _instance;
 
@@ -107,9 +109,13 @@ public class GameManager : MonoBehaviour
             stageIndex++;
             stages[stageIndex].SetActive(true);
 
-
+            if(stageIndex == 3)
+            {
+                shopExplanation.SetActive(true);
+            }
             if (stageIndex == 4)
             {
+                shopExplanation.SetActive(false);
                 cinemachine.SetActive(false);
                 boss = GameObject.Find("Boss").GetComponent<Boss>();
                 BossHP.SetActive(true);

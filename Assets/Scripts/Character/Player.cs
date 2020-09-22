@@ -46,11 +46,13 @@ public class Player : Character
 
     Inventory inventory;
 
+    [SerializeField]
+    private Transform inventoryPos;
     public override void Start()
     {
         base.Start();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        inventory = Instantiate(inventoryPrefab);
+        inventory = Instantiate(inventoryPrefab, inventoryPos.transform);
     }
 
     void Update()

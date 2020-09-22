@@ -16,6 +16,11 @@ public class BossShuriken : MonoBehaviour
 
     void Update()
     {
+        Rotate();
+    }
+
+    void Rotate()
+    {
         transform.Rotate(Vector3.forward, 400 * Time.deltaTime);
         startCoolTime += Time.deltaTime;
 
@@ -39,7 +44,6 @@ public class BossShuriken : MonoBehaviour
         {
             startCoolTime = 0;
         }
-
     }
 
 }

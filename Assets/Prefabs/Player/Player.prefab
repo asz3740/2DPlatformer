@@ -173,15 +173,10 @@ MonoBehaviour:
     type: 3}
   dashSpeed: 10
   jumpPower: 20
-  isSwimming: 0
-  MaxHP: 100
-  ATT: 30
-  CurImage: {fileID: 0}
-  EXP: 0
-  MaxEXP: 120
-  LEVEL: 1
+  RangedAtkCool: 4
   inventoryPrefab: {fileID: 6997910995658898419, guid: 52f5946e7d1134ef0945e23ac3529fcd,
     type: 3}
+  inventoryPos: {fileID: 0}
 --- !u!1 &6445883825530132896
 GameObject:
   m_ObjectHideFlags: 0
