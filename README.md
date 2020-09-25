@@ -68,7 +68,7 @@
    </tr>
 </table>
 
-## UML
+## Simple UML
 <img src="/Images/UML.png" width="100%">
  
 ## 배운 점
