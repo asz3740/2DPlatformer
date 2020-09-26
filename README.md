@@ -24,7 +24,7 @@
       <td><img src="/Images/튜토리얼.png" width="100%"></td>
    </tr>
    <tr>
-      <td><div align="center" >메인화면</div></td>
+      <td><div align="center" >메인</div></td>
       <td><div align="center" >튜토리얼</div></td>
    </tr>
    <tr>
