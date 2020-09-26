@@ -69,7 +69,7 @@
 </table>
 
 ## Simple UML
-<img src="/Images/UML.png" width="100%">
+<img src="/Images/SimpleUML.png" width="100%">
  
 ## 배운 점
 **1. 적 AI 구현**  
