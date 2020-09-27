@@ -80,5 +80,5 @@ StateMachineBehaviour을 활용해 AI 구현
 빠른 아이템 에셋 생성 구현
 
 ## 시연 영상
-[GitHub](http://github.com "깃허브")
+[시연 영상](https://www.youtube.com/watch?v=Rxqsc_q12oY&t=3s)
     
