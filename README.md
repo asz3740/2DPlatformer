@@ -53,6 +53,9 @@
    </tr>
 </table>
 
+## 시연 영상
+[시연 영상](https://www.youtube.com/watch?v=Rxqsc_q12oY&t=3s)
+
 ## 개발일정
 기획 | 클래스 및 기능 설계 | 구현 | 테스트
 :----:| :---------------: | :---: | :-----: 
@@ -79,6 +82,5 @@ StateMachineBehaviour을 활용해 AI 구현
 **3. Scriptable Object**  
 빠른 아이템 에셋 생성 구현
 
-## 시연 영상
-[시연 영상](https://www.youtube.com/watch?v=Rxqsc_q12oY&t=3s)
+
     
