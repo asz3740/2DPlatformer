@@ -2,6 +2,10 @@
 
 ## 게임 소개
 2D 로그라이트 요소가 가미된 2D 플랫포머 횡스크롤 액션 게임
+
+## 시연 영상
+[시연 영상](https://www.youtube.com/watch?v=Rxqsc_q12oY&t)
+
 ## 프롤로그
 닌자들이 살고 있는 평화로운 마을이 타락한 닌자에 의해 파괴되고 있다.    
 한때 친한 친구였던 당신은 친구를 악에서 깨우기 위해 친구가 살고 있는 던전에 들어가기로 결심한다.  
@@ -24,7 +28,7 @@
       <td><img src="/Images/튜토리얼.png" width="100%"></td>
    </tr>
    <tr>
-      <td><div align="center" >메인화면</div></td>
+      <td><div align="center" >메인</div></td>
       <td><div align="center" >튜토리얼</div></td>
    </tr>
    <tr>
@@ -56,7 +60,7 @@
 ## 개발일정
 기획 | 클래스 및 기능 설계 | 구현 | 테스트
 :----:| :---------------: | :---: | :-----: 
-2019.11 | 2019.11 | 2019.12 | 2020.1
+2019.11 | 2019.11 | 2019.12 | 2020.01
 
 ## 참고한 게임
 <table>
@@ -69,7 +73,7 @@
 </table>
 
 ## Simple UML
-<img src="/Images/UML.png" width="100%">
+<img src="/Images/SimpleUML.png" width="100%">
  
 ## 배운 점
 **1. 적 AI 구현**  
