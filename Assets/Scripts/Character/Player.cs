@@ -8,14 +8,10 @@ public class Player : Character
 {
     [Header("이동")]
 
-    [SerializeField]
     public float dashSpeed;
 
     private float walkAnimSpeed = 1.5f;
     private float runAnimSpeed = 2f;
-
-
-
 
     [Header("점프")]
 
@@ -24,19 +20,14 @@ public class Player : Character
 
     private int jumpCount = 0;
 
-
     [Header("공격")]
 
     private float atkCoolTime;
     private float atkCheckCoolTime;
     private float atkCheckCool = 0.8f;
 
-
-
     private float MeleeAtkCool = 1.7f;
-
     public float RangedAtkCool = 4f;
-
 
     [Header("상태")]
     private bool isAttack = false;
@@ -44,7 +35,7 @@ public class Player : Character
 
     public Inventory inventoryPrefab;
 
-    Inventory inventory;
+    private Inventory inventory;
 
     [SerializeField]
     private Transform inventoryPos;
@@ -62,9 +53,9 @@ public class Player : Character
             Die();
         }
 
-        Jump(); // 점프
-        RangedAttack(); // 스킬
-        Attack(); // 공격
+        Jump(); 
+        RangedAttack(); 
+        Attack(); 
 
         UseItem();
     }
@@ -85,9 +76,6 @@ public class Player : Character
                 Move(horizontal);
             }
         }
-
-
-
     }
 
     void Move(float horizontal)
@@ -148,7 +136,6 @@ public class Player : Character
 
         if (myRigid.velocity.y < 0)
         {
-            print("true");
             Debug.DrawRay(myRigid.position, Vector3.down * 3, new Color(0, 1, 0));
             RaycastHit2D rayHit = Physics2D.Raycast(myRigid.position, Vector3.down,3, LayerMask.GetMask("Platform"));
 
@@ -166,7 +153,6 @@ public class Player : Character
 
     void Attack()
     {
-        print(isAttack);
         if (atkCoolTime <= 0)
         {
             if (Input.GetMouseButtonDown(0))
@@ -190,8 +176,6 @@ public class Player : Character
             isAttack = false;
         }
     }
-
-  
 
     void RangedAttack()
     {
@@ -220,14 +204,11 @@ public class Player : Character
         }
     }
 
-
     public override void TakeDamage(int damaged)
     {
         HP -= damaged;
 
-        print("플레이어 맞음" + HP);
         base.TakeDamage(damaged);
-        // 투명
         spriteRenderer.color = new Color(1, 1, 1, 0.4f);
 
         myAnim.SetTrigger("Damaged");
@@ -238,7 +219,6 @@ public class Player : Character
     {
         spriteRenderer.color = new Color(1, 1, 1, 1);
     }
-
 
     public override void Die()
     {
@@ -251,7 +231,6 @@ public class Player : Character
         myRigid.velocity = Vector2.zero;
     }
    
-
     public override void OnTriggerEnter2D(Collider2D collision)
     {
         base.OnTriggerEnter2D(collision);
@@ -282,7 +261,6 @@ public class Player : Character
 
                         break;
                     case Item.ItemType.POTION:
-                        print(hitObject);
                         shouldDisappear = inventory.AddItem(hitObject);
                         shouldDisappear = true;
 
@@ -295,9 +273,7 @@ public class Player : Character
                 if(shouldDisappear)
                 {
                     collision.gameObject.SetActive(false);
-                }
-                print("hit: " + hitObject.objectName);
-            
+                }           
             }
         }
 
@@ -327,8 +303,4 @@ public class Player : Character
             yield return new WaitForSeconds(1);
         }
     }
-
-
-
-
 }

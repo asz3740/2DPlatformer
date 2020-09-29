@@ -18,7 +18,6 @@ public class Enemy : Character
     public override void Start()
     {
         base.Start();
-        //GetChild(1)
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         home = transform.position;
@@ -61,12 +60,8 @@ public class Enemy : Character
     public override void TakeDamage(int damaged)
     {
         HP -= damaged;
-        print("적 맞음" + HP);
 
         base.TakeDamage(damaged);
-        // 투명
-        //spriteRenderer.color = new Color(1, 1, 1, 0.4f);
-
         spriteRenderer.color = Color.red;
 
         myAnim.SetTrigger("Damaged");
@@ -75,7 +70,6 @@ public class Enemy : Character
 
     void OffDamaged()
     {
-        //spriteRenderer.color = new Color(1, 1, 1, 1);
         spriteRenderer.color = Color.white;
     }
 

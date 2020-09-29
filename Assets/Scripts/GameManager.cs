@@ -92,7 +92,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-
     void Start()
     {
         player = GameObject.Find("Player").GetComponent<Player>();
@@ -104,7 +103,6 @@ public class GameManager : MonoBehaviour
     {
         if (stageIndex < stages.Length - 1)
         {
-            print(stageIndex);
             stages[stageIndex].SetActive(false);
             stageIndex++;
             stages[stageIndex].SetActive(true);
@@ -148,7 +146,6 @@ public class GameManager : MonoBehaviour
     {
 
         float playerHP = player.HP;
-        print("playerHP" + playerHP);
         float playerMaxHP = player.startHP;
         if (playerHP < 0)
         {
@@ -163,8 +160,6 @@ public class GameManager : MonoBehaviour
     private void BossHPbarUI()
     {
         float bossHP = boss.HP;
-        print(" boss.HP" + boss.HP);
-        print("bossHP" + bossHP);
         bossHPbarI.fillAmount = bossHP / 1000;
         bossHPT.text = string.Format("HP {0}/1000", bossHP, 1000f);
     }

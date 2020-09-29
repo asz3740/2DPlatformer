@@ -4,33 +4,34 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
+    [System.NonSerialized]
     public Rigidbody2D myRigid;
+    [System.NonSerialized]
     public Animator myAnim;
-    public SpriteRenderer spriteRenderer; 
+    [System.NonSerialized]
+    public SpriteRenderer spriteRenderer;
+
+    [Header("이동")]
     public float speed;
+    public bool facingRight = true;
+    
     public int HP = 100;
     public int startHP;
 
-    public bool facingRight = true;
+    [SerializeField]
+    private List<string> damageSources;
 
-
-    [Header("기본 공격")]
+    [Header("근접 공")]
 
     [SerializeField]
     private Transform MeleeAtkPos;
-
     [SerializeField]
     private GameObject MeleeAtkPrefab;
-
-
-    [SerializeField]
-    private List<string> damageSources;
 
     [Header("원거리 공격")]
 
     [SerializeField]
     private Transform RangedAtkPos;
-
     [SerializeField]
     public GameObject RangedAtkPrefab;
 
@@ -43,7 +44,6 @@ public class Character : MonoBehaviour
 
     public virtual void TakeDamage(int damaged)
     {
-        print(HP); 
         if (HP <= 0)
         {
             Die();
@@ -59,7 +59,6 @@ public class Character : MonoBehaviour
     {
         Instantiate(MeleeAtkPrefab, MeleeAtkPos.position, Quaternion.identity);
     }
-
 
     public virtual void ThrowObject()
     {
@@ -78,10 +77,8 @@ public class Character : MonoBehaviour
 
     public virtual void OnTriggerEnter2D(Collider2D collision)
     {
-        //count++;
         if (damageSources.Contains(collision.tag))
         {
-            print("맞음");
             Weapon weapon = collision.GetComponent<Weapon>();
             TakeDamage(weapon.damage);
         }
