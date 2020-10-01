@@ -24,32 +24,32 @@
 ## 게임화면
 <table border="1">
    <tr>
-      <td><img src="/Images/메인화면.png" width="100%"></td>
-      <td><img src="/Images/튜토리얼.png" width="100%"></td>
+      <td><img src="/Images/메인화면.jpg" width="100%"></td>
+      <td><img src="/Images/튜토리얼.jpg" width="100%"></td>
    </tr>
    <tr>
       <td><div align="center" >메인</div></td>
       <td><div align="center" >튜토리얼</div></td>
    </tr>
    <tr>
-      <td><img src="/Images/Stage1.png" width="100%"></td>
-      <td><img src="/Images/Stage2.png" width="100%"></td>
+      <td><img src="/Images/Stage1.jpg" width="100%"></td>
+      <td><img src="/Images/Stage2.jpg" width="100%"></td>
    </tr>
    <tr>
       <td><div align="center" >스테이지1</div></td>
       <td><div align="center" >스테이지2</div></td>
    </tr>
     <tr>
-      <td><img src="/Images/Stage3.png" width="100%"></td>
-      <td><img src="/Images/Shop.png" width="100%"></td>
+      <td><img src="/Images/Stage3.jpg" width="100%"></td>
+      <td><img src="/Images/Shop.jpg" width="100%"></td>
    </tr>
      <tr>
       <td><div align="center" >스테이지3</div></td>
       <td><div align="center" >상점</div></td>
    </tr>
      <tr>
-      <td><img src="/Images/BossStage.png" width="100%"></td>
-      <td><img src="/Images/GameOver.png" width="100%"></td>
+      <td><img src="/Images/BossStage.jpg" width="100%"></td>
+      <td><img src="/Images/GameOver.jpg" width="100%"></td>
    </tr>
      <tr>
       <td><div align="center" >보스 스테이지</div></td>
@@ -65,7 +65,7 @@
 ## 참고한 게임
 <table>
    <tr>
-      <td><img src="/Images/던그리드.png" width="100%"></td>
+      <td><img src="/Images/던그리드.jpg" width="100%"></td>
    </tr>
     <tr>
            <td><div align="center">던그리드</div></td>
@@ -73,7 +73,7 @@
 </table>
 
 ## Simple UML
-<img src="/Images/SimpleUML.png" width="100%">
+<img src="/Images/SimpleUML.jpg" width="100%">
  
 ## 배운 점
 **1. 적 AI 구현**  
