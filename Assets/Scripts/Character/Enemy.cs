@@ -56,12 +56,17 @@ public class Enemy : Character
         }         
     }
 
-
+    public GameObject hudDamageText;
+    public Transform hudPos;
     public override void TakeDamage(int damaged)
     {
         HP -= damaged;
 
         base.TakeDamage(damaged);
+
+        GameObject hudText = Instantiate(hudDamageText); // 생성할 텍스트 오브젝트
+        hudText.transform.position = hudPos.position;
+        hudText.GetComponent<DamageText>().damage = damaged;
         spriteRenderer.color = Color.red;
 
         myAnim.SetTrigger("Damaged");
@@ -88,13 +93,4 @@ public class Enemy : Character
         myAnim.Play("Idle");
         HP = startHP;
     }
-
-
-
-
-    
-
-
-
-
 }

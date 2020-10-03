@@ -230,7 +230,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 946391991}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1fd166be6c070f4abed055d43829139, type: 3}
+  m_Script: {fileID: 11500000, guid: 0a362eb60dd7a469ea2f013db7a299fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   progressBar: {fileID: 1335305143}

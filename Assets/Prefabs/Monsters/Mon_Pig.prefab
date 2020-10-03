@@ -193,6 +193,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &5176358466338589592
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 17295604287915472}
+  m_Layer: 11
+  m_Name: DamagePos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &17295604287915472
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5176358466338589592}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 3.81, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7698504950888538229}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6476770067082492168
 GameObject:
   m_ObjectHideFlags: 0
@@ -559,6 +589,7 @@ Transform:
   m_Children:
   - {fileID: 2421488805939702597}
   - {fileID: 4228980053672795974}
+  - {fileID: 17295604287915472}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -641,18 +672,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 088e6e81c867f714baed878fda715cae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myRigid: {fileID: 0}
-  myAnim: {fileID: 0}
-  spriteRenderer: {fileID: 0}
   speed: 10
+  facingRight: 0
   HP: 150
   startHP: 0
-  facingRight: 0
+  damageSources:
+  - PlayerWeapon
   MeleeAtkPos: {fileID: 4228980053672795974}
   MeleeAtkPrefab: {fileID: 5334017984655420129, guid: 53f548941bcff4e2988587cd521ea41c,
     type: 3}
-  damageSources:
-  - PlayerWeapon
   RangedAtkPos: {fileID: 0}
   RangedAtkPrefab: {fileID: 0}
   player: {fileID: 0}
@@ -662,3 +690,6 @@ MonoBehaviour:
   facingLeft: 1
   isFly: 0
   coin: 50
+  hudDamageText: {fileID: 3566684499925087121, guid: 8145d60d2e79a4cd3ae3292d35e0fd75,
+    type: 3}
+  hudPos: {fileID: 17295604287915472}

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
+
     [System.NonSerialized]
     public Rigidbody2D myRigid;
     [System.NonSerialized]
