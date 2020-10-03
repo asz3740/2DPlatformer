@@ -1,7 +1,7 @@
 # NinjaWorld (2DPlatformer)
 
 ## 게임 소개
-2D 로그라이트 요소가 가미된 2D 플랫포머 횡스크롤 액션 게임
+로그라이트 요소가 가미된 2D 플랫포머 횡스크롤 액션 게임
 
 ## 시연 영상
 [시연 영상](https://www.youtube.com/watch?v=Rxqsc_q12oY&t)
